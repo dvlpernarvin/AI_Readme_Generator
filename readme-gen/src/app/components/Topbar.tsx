@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Link from "next/link";
 import React from "react";
 
 const Topbar: NextPage = () => {
@@ -16,12 +17,14 @@ const Topbar: NextPage = () => {
         </div>
 
         <div className="flex items-center gap-3">
-          <button
-            type="button"
-            className="hidden md:inline-flex items-center justify-center bg-white text-black rounded-xl px-4 py-2 h-10 text-sm font-medium shadow-sm hover:brightness-95 transition cursor-pointer"
-            aria-label="Log in">
-            log In
-          </button>
+          <Link href="/auth/signin">
+            <button
+              type="button"
+              className="hidden md:inline-flex items-center justify-center bg-white text-black rounded-xl px-4 py-2 h-10 text-sm font-medium shadow-sm hover:brightness-95 transition cursor-pointer"
+              aria-label="Log in">
+              log In
+            </button>
+          </Link>
 
           <button
             type="button"
